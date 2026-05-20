@@ -1,13 +1,14 @@
 :root {
-  --cream: #E5E4E0;
-  --lavender: #DCD7E6;
-  --blush: #E6CAD5;
-  --mauve: #C09BC8;
-  --purple: #9D7AB2;
-  --sage: #A9B89F;
-  --green: #90AD95;
-  --blue: #9EB2D3;
-  --charcoal: #4B4A53;
+  --coral: #FF6B6B;
+  --sunset: #FF914D;
+  --apricot: #FFB38A;
+  --rose: #F28BA8;
+  --lilac: #C8A2C8;
+  --melon: #FF8E7A;
+  --cream-orange: #FFC06A;
+  --blush: #FFE4DC;
+  --cocoa: #4A3B36;
+  --charcoal: #2B2B33;
 }
 
 * {
@@ -22,7 +23,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--cream);
+  background: var(--blush);
   color: var(--charcoal);
   overflow-x: hidden;
 }
@@ -46,14 +47,16 @@ section {
   align-items: center;
   position: sticky;
   top: 0;
-  background: rgba(229, 228, 224, 0.85);
+  background: rgba(255, 228, 220, 0.85);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  border-bottom: 1px solid rgba(74, 59, 54, 0.08);
 }
 
 .logo {
   font-size: 1.6rem;
   font-weight: 600;
+  color: var(--cocoa);
 }
 
 .nav-links {
@@ -64,7 +67,7 @@ section {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--charcoal);
+  color: var(--cocoa);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
@@ -72,7 +75,7 @@ section {
 }
 
 .nav-links a:hover {
-  opacity: 0.6;
+  color: var(--coral);
 }
 
 /* HERO */
@@ -87,7 +90,8 @@ section {
 
 .tag {
   display: inline-block;
-  background: var(--blush);
+  background: var(--rose);
+  color: white;
   padding: 12px 20px;
   border-radius: 999px;
   margin-bottom: 30px;
@@ -98,6 +102,7 @@ section {
   font-size: 5rem;
   line-height: 1.05;
   margin-bottom: 30px;
+  color: var(--cocoa);
 }
 
 .hero p {
@@ -105,6 +110,7 @@ section {
   line-height: 1.8;
   max-width: 600px;
   margin-bottom: 40px;
+  color: rgba(43, 43, 51, 0.8);
 }
 
 .hero-buttons {
@@ -122,23 +128,29 @@ section {
 }
 
 .primary-btn {
-  background: var(--purple);
+  background: linear-gradient(
+    135deg,
+    var(--coral),
+    var(--sunset)
+  );
   color: white;
   padding: 18px 32px;
   border-radius: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
 }
 
 .secondary-btn {
-  border: 1px solid var(--charcoal);
-  color: var(--charcoal);
+  border: 1px solid var(--cocoa);
+  color: var(--cocoa);
   padding: 18px 32px;
   border-radius: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8rem;
+  background: rgba(255,255,255,0.4);
 }
 
 .primary-btn:hover,
@@ -155,14 +167,14 @@ section {
 .blur-circle {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.6;
+  filter: blur(90px);
+  opacity: 0.55;
 }
 
 .blur-purple {
-  width: 250px;
-  height: 250px;
-  background: var(--mauve);
+  width: 260px;
+  height: 260px;
+  background: var(--lilac);
   top: -40px;
   left: -40px;
 }
@@ -170,7 +182,7 @@ section {
 .blur-green {
   width: 300px;
   height: 300px;
-  background: var(--green);
+  background: var(--melon);
   bottom: -40px;
   right: -40px;
 }
@@ -179,7 +191,7 @@ section {
   position: relative;
   overflow: hidden;
   border-radius: 40px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
 }
 
 .hero-image-card img {
@@ -222,7 +234,7 @@ section {
   opacity: 0.7;
 }
 
-/* SECTION STYLES */
+/* SECTION TITLES */
 
 .section-header span,
 .section-label,
@@ -231,7 +243,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 0.8rem;
-  color: var(--purple);
+  color: var(--coral);
 }
 
 .section-header h2,
@@ -240,6 +252,7 @@ section {
   font-size: 3.5rem;
   margin-top: 20px;
   line-height: 1.1;
+  color: var(--cocoa);
 }
 
 /* BRANDS */
@@ -252,12 +265,17 @@ section {
 }
 
 .brand-card {
-  background: var(--lavender);
+  background: linear-gradient(
+    135deg,
+    var(--apricot),
+    var(--cream-orange)
+  );
   padding: 40px;
   border-radius: 25px;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
+  color: var(--cocoa);
 }
 
 /* SERVICES */
@@ -273,6 +291,7 @@ section {
   padding: 40px;
   border-radius: 35px;
   transition: 0.3s ease;
+  color: white;
 }
 
 .service-card:hover {
@@ -289,15 +308,27 @@ section {
 }
 
 .mauve {
-  background: var(--mauve);
+  background: linear-gradient(
+    135deg,
+    var(--rose),
+    var(--lilac)
+  );
 }
 
 .blue {
-  background: var(--blue);
+  background: linear-gradient(
+    135deg,
+    var(--sunset),
+    var(--coral)
+  );
 }
 
 .sage {
-  background: var(--sage);
+  background: linear-gradient(
+    135deg,
+    var(--melon),
+    var(--apricot)
+  );
 }
 
 .blush {
@@ -354,8 +385,8 @@ section {
 }
 
 .work-btn {
-  background: var(--blush);
-  color: var(--charcoal);
+  background: white;
+  color: var(--cocoa);
   padding: 14px 24px;
   border-radius: 15px;
   display: inline-block;
@@ -364,12 +395,20 @@ section {
 /* ABOUT */
 
 .about-container {
-  background: var(--charcoal);
+  background: linear-gradient(
+    135deg,
+    var(--cocoa),
+    var(--charcoal)
+  );
   border-radius: 40px;
   padding: 80px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+  color: white;
+}
+
+.about-text h2 {
   color: white;
 }
 
@@ -390,30 +429,55 @@ section {
   height: 220px;
 }
 
+.about-box.mauve {
+  background: var(--lilac);
+}
+
+.about-box.sage {
+  background: var(--melon);
+}
+
+.about-box.blue {
+  background: var(--sunset);
+}
+
+.about-box.blush {
+  background: var(--rose);
+}
+
 /* CTA */
 
 .cta-container {
-  background: var(--purple);
+  background: linear-gradient(
+    135deg,
+    var(--coral),
+    var(--sunset)
+  );
   padding: 100px;
   border-radius: 45px;
   text-align: center;
   color: white;
+  box-shadow: 0 20px 60px rgba(255, 107, 107, 0.25);
 }
 
 .cta-container span {
   color: rgba(255,255,255,0.8);
 }
 
+.cta-container h2 {
+  color: white;
+}
+
 .cta-container p {
   max-width: 700px;
   margin: 30px auto 50px;
   line-height: 1.8;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
 }
 
 .cta-btn {
-  background: var(--cream);
-  color: var(--charcoal);
+  background: white;
+  color: var(--cocoa);
   padding: 18px 35px;
   border-radius: 20px;
   display: inline-block;
